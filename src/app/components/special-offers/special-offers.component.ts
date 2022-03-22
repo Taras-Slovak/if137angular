@@ -45,13 +45,6 @@ export class SpecialOffersComponent implements OnInit {
       });
   }
 
-  goToLink(link: any) {
-    window.open(
-      `https://search.jetradar.com/flights/${link}&currency=${this.currency}&locale=${this.language}`,
-      '_blank'
-    );
-  }
-
   getCurrency(number: any) {
     return new Intl.NumberFormat('en-IN', {
       style: 'currency',
@@ -70,5 +63,12 @@ export class SpecialOffersComponent implements OnInit {
       return ` ${minutes}m`;
     }
     return `${hours}h:${minutes}m`;
+  }
+
+  goToLink(link: any) {
+    window.open(
+      `https://search.jetradar.com/flights/${link}&currency=${this.currency}&locale=${this.language}`,
+      '_blank'
+    );
   }
 }

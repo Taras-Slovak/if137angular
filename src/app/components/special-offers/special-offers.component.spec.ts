@@ -32,7 +32,7 @@ import { FlightInfoState } from 'src/app/store/flight-info.state';
 import { GetSpecialOffers } from 'src/app/store/flight-info.action';
 import { SortPipe } from 'src/utils/sort.pipe';
 
-describe('SpecialOffersComponent', () => {
+fdescribe('SpecialOffersComponent', () => {
   let component: SpecialOffersComponent;
   let fixture: ComponentFixture<SpecialOffersComponent>;
   let debugElement: DebugElement;
@@ -177,9 +177,7 @@ describe('SpecialOffersComponent', () => {
       // assert
       fixture.whenStable().then(() => {
         fixture.detectChanges();
-
         const noDataDebugElements = debugElement.queryAll(By.css('.no-data'));
-        console.log(noDataDebugElements);
         expect(noDataDebugElements.length > 0).toBeTruthy();
         done();
       });
@@ -208,9 +206,6 @@ describe('SpecialOffersComponent', () => {
         const cardGroupDebugElements = debugElement.queryAll(
           By.css('.card-group')
         );
-
-        console.log(noDataDebugElements);
-        console.log(cardGroupDebugElements);
 
         expect(noDataDebugElements.length).toBeFalsy();
         expect(cardGroupDebugElements.length > 0).toBeTruthy();

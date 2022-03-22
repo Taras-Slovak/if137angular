@@ -15,7 +15,7 @@ import { RequestDataService } from 'src/app/services/request-data.service';
 import { FlightsInfoService } from 'src/app/services/flights-info.service';
 import { FlightInfoState } from 'src/app/store/flight-info.state';
 
-describe('CurrencyDropdownComponent', () => {
+fdescribe('CurrencyDropdownComponent', () => {
   let component: CurrencyDropdownComponent;
   let fixture: ComponentFixture<CurrencyDropdownComponent>;
   let storeMock: any;
@@ -28,7 +28,6 @@ describe('CurrencyDropdownComponent', () => {
   let formDataMock = new Subject();
   let currenciesSubject = new BehaviorSubject([{ code: '' }]);
   let currencySubject = new BehaviorSubject('');
-  let debugElement: DebugElement;
 
   beforeEach(() => {
     storeMock = {
@@ -43,7 +42,6 @@ describe('CurrencyDropdownComponent', () => {
       dispatch: jasmine.createSpy('dispatch'),
     };
 
-    // jasmine.createSpy().and.returnValue({});
     flightsInfoServiceMock = {};
     requestDataServiceMock = {};
     requestDataStateMock = {};

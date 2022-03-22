@@ -22,7 +22,7 @@ describe('FlightsInfoService', () => {
     service = new FlightsInfoService(httpMock, storeMock);
   });
 
-  describe('#getSpecialOffers', () => {
+  fdescribe('#getSpecialOffers', () => {
     it('should call http with appropriate params', () => {
       // arrange
       storeMock.selectSnapshot = jasmine
